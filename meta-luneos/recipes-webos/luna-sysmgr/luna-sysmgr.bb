@@ -13,7 +13,7 @@ DEPENDS += "serviceinstaller"
 #RDEPENDS_${PN} += "jail" #TODO
 
 PV = "3.0.0-3+git${SRCPV}"
-SRCREV = "f2d3eb84d6484512cd828d16731d4a9f359309c2"
+SRCREV = "3a2386d516e636619a7275bff1f4205eee2a0f0e"
 
 WEBOS_SYSTEM_BUS_SKIP_DO_TASKS = ""
 
@@ -23,7 +23,7 @@ inherit webos_system_bus
 inherit webos_cmake_qt5
 inherit webos_systemd
 
-SRC_URI = "${WEBOS_PORTS_GIT_REPO_COMPLETE}"
+SRC_URI = "${WEBOS_PORTS_GIT_REPO_COMPLETE};branch=webosose"
 S = "${WORKDIR}/git"
 
 do_install_append() {
