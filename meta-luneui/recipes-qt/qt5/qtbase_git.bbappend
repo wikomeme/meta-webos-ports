@@ -13,6 +13,7 @@ SRC_URI_append_arm = " file://0002-Temporary-fix-for-SIGBUS-crash-disable-TLS.pa
 QPA ?= "-qpa wayland-egl"
 QPA_rpi = "-qpa wayland"
 QPA_qemuall = "-qpa eglfs"
+QPA_pinephone = "-qpa eglfs"
 
 QT_CONFIG_FLAGS += "${QPA}"
 
