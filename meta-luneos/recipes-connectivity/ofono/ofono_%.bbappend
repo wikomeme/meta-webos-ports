@@ -6,7 +6,7 @@ PV = "1.19+git${SRCPV}"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=eb723b61539feef013de476e68b5c50a"
 
-DEPENDS += "libglibutil dbus-glib"
+DEPENDS += "libglibutil dbus-glib libgrilio libmce-glib"
 RDEPENDS_${PN} += "mobile-broadband-provider-info ofono-conf"
 
 SRC_URI  = " \
@@ -23,7 +23,7 @@ S = "${WORKDIR}/git/ofono"
 # Can't build out of tree right now so we have to build in tree
 B = "${S}"
 
-EXTRA_OECONF_append = " --disable-sailfish-pushforwarder"
+EXTRA_OECONF_append = " --disable-sailfish-pushforwarder  --enable-sailfish-rilmodem"
 
 do_install_append() {
     # Override default system service configuration
