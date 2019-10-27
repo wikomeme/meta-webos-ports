@@ -13,6 +13,8 @@ SRC_URI  = " \
   git://git.merproject.org/mer-core/ofono.git \
   file://0001-Enable-the-various-modem-plugins-we-support-again.patch;striplevel=2 \
   file://0002-Add-support-for-the-Ericsson-F5521gw-modem.patch;striplevel=2 \
+  file://0003-Backport-QMI-modem.patch;striplevel=2 \
+  file://0004-support-smdpkt.patch;striplevel=1 \
   file://ofono \
   file://ofono.service \
 "
@@ -22,7 +24,7 @@ S = "${WORKDIR}/git/ofono"
 # Can't build out of tree right now so we have to build in tree
 B = "${S}"
 
-EXTRA_OECONF_append = " --disable-sailfish-pushforwarder --enable-sailfish-rilmodem"
+EXTRA_OECONF_append = " --disable-sailfish-pushforwarder --enable-sailfish-rilmodem --enable-qmimodem"
 
 # this version does't support it:
 # ERROR: ofono-1.19+gitAUTOINC+b5ed6d16db-r0 do_configure: QA Issue: ofono: configure was passed unrecognised options: --enable-external-ell [unknown-configure-option]
