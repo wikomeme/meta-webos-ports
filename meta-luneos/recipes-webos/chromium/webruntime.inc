@@ -72,7 +72,7 @@ WEBOS_SYSTEM_BUS_MANIFEST_TYPE = "PASS"
 
 PACKAGECONFIG ?= "jumbo neva-media"
 PACKAGECONFIG_append = " libpci"
-PACKAGECONFIG_append_hardware = " gstreamer umediaserver"
+#PACKAGECONFIG_append_hardware = " gstreamer umediaserver"
 PACKAGECONFIG[gstreamer] = "use_gst_media=true enable_webm_video_codecs=false,use_gst_media=false,g-media-pipeline"
 PACKAGECONFIG[umediaserver] = ",,umediaserver"
 # Options to enable debug build. Add this PACKAGECONFIG to webos-local.conf to enable debug build

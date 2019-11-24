@@ -5,4 +5,4 @@
 #
 
 #PREFERRED_VERSION_webruntime ?= "72.%"
-PREFERRED_VERSION_webruntime ?= "68.%"
+PREFERRED_VERSION_webruntime ?= "68"
