@@ -24,7 +24,7 @@ def webos_app_generate_security_files_write_permission_file(d, app_info):
     type   = app_info["type"]
 
     
-    if type == "native" or "com.palm." in app_id:
+    if type == "native" in app_id:
         key = app_id
 
     permission = {}
