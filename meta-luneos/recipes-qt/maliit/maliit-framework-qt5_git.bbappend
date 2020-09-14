@@ -30,7 +30,7 @@ do_install_append() {
     install -d ${D}${localstatedir}/lib/maliit
 }
 
-pkg_postinst_${PN} () {
+pkg_postinst_ontarget_${PN} () {
 }
 
 pkg_postrm_${PN} () {
